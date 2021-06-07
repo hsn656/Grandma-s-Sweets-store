@@ -18,6 +18,34 @@ body {
     outline: none !important;
 }
 
+
+/* general styles */
+
+.banner-title {
+    color: var(--mainPink);
+    font-size: 3rem;
+}
+
+.btn-pink {
+    border-color: var(--mainPink) !important;
+    color: var(--mainPink) !important;
+}
+
+.btn-pink:hover {
+    color: var(--mainBlack) !important;
+    background-color: var(--mainPink) !important;
+}
+
+.btn-black {
+    border-color: var(--mainBlack) !important;
+    color: var(--mainBlack) !important;
+}
+
+.btn-black:hover {
+    color: var(--mainPink) !important;
+    background-color: var(--mainBlack) !important;
+}
+
 .toggler-icon {
     color: #ef7998;
     font-size: 2.5rem;
@@ -58,11 +86,6 @@ body {
     margin-top: -10rem;
 }
 
-.banner-title {
-    color: var(--mainPink);
-    font-size: 3rem;
-}
-
 .banner-link {
     border: solid .1rem var(--mainBlack);
     font-size: 1.3rem;
@@ -72,4 +95,29 @@ body {
 .banner-link:hover {
     background-color: var(--mainPink);
     transform: scale(1.1, 1.1);
+}
+
+
+/* about section */
+
+.about-img-container {
+    position: relative;
+}
+
+.about-img-container::before {
+    content: "";
+    width: 100%;
+    height: 93%;
+    border: 0.4rem solid var(--mainYellow);
+    position: absolute;
+    top: -1rem;
+    left: -2rem;
+    z-index: -1;
+    transition: all 1s ease-in-out;
+}
+
+.about-img-container:hover::before {
+    top: 1rem;
+    left: 0;
+    z-index: 2;
 }
