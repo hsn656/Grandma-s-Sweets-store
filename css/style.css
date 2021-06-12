@@ -74,12 +74,40 @@ body {
     color: var(--mainWhite);
 }
 
-.max-height {
+.header-img-container {
     min-height: calc(100vh - 76px);
     background: linear-gradient(var(--yellowTrans), var(--yellowTrans)), url(../img/headerBcg.jpeg);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    position: relative;
+}
+
+.cart {
+    position: absolute;
+    top: 0;
+    background-color: rgba(255, 255, 255, .5);
+    right: 1%;
+    width: 0;
+    overflow: hidden;
+    padding: 0;
+    transition: transform .3s ease-in-out;
+    transform: rotateY(180deg);
+}
+
+.show-cart {
+    width: 18rem;
+    padding: 1.5rem;
+    transform: rotateY(360deg);
+}
+
+.cart-item-price {
+    font-size: .8rem;
+}
+
+.cart-img-container {
+    height: 50px;
+    width: 50px;
 }
 
 .banner {
@@ -193,4 +221,18 @@ body {
 
 .service-title {
     letter-spacing: .4rem;
+}
+
+.contact-icon {
+    color: var(--mainPink);
+    padding: .3rem;
+}
+
+.contact-icon:hover {
+    color: var(--mainWhite);
+}
+
+.contact-section {
+    /* background: linear-gradient(var(--yellowTrans), var(--yellowTrans)); */
+    background: linear-gradient(var(--mainYellow), var(--mainYellow));
 }
