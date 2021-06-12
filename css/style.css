@@ -121,3 +121,76 @@ body {
     left: 0;
     z-index: 2;
 }
+
+
+/* store section */
+
+.store {
+    background-color: var(--mainGrey);
+}
+
+.search-icon {
+    background-color: var(--mainPink);
+}
+
+
+/* store items section */
+
+.store-item {
+    transition: all .3s linear;
+    /* padding: 0; */
+}
+
+.store-item:hover {
+    box-shadow: 0 10px 15px rgb(0, 0, 0);
+}
+
+.img-container {
+    position: relative;
+    overflow: hidden;
+    transition: all .7s;
+}
+
+.cart-icon {
+    position: absolute;
+    padding: .7rem;
+    background-color: var(--mainYellow);
+    border-top-left-radius: 1rem;
+    font-size: 1.2rem;
+    transition: all .7s ease;
+    bottom: 0;
+    right: 0;
+    transform: translate(100%, 100%);
+}
+
+.cart-icon:hover {
+    color: var(--mainWhite);
+}
+
+.store-item:hover .cart-icon {
+    position: absolute;
+    transform: translate(0, 0);
+}
+
+.img-container .item-img {
+    transition: all .7s;
+}
+
+.img-container:hover .item-img {
+    transform: scale(1.2);
+}
+
+
+/* services section */
+
+.services {
+    background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url("../img/servicesBcg.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.service-title {
+    letter-spacing: .4rem;
+}
