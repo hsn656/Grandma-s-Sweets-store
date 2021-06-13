@@ -14,13 +14,27 @@ let filterDonut = document.getElementById("filterDonut")
 
 // store items container
 let items = document.getElementById("items");
+let searchInput = document.getElementById("searchInput");
+let searchBtn = document.getElementById("searchBtn");
 
 function showFilteredItems(filter) {
-    items.children
     for (let i = 0; i < items.children.length; i++) {
-        items.children[i].classList.remove("d-none")
-        if (items.children[i].dataset.type != filter && filter != "all") {
-            items.children[i].classList.add("d-none")
+        items.children[i].classList.add("d-none")
+        if (items.children[i].dataset.type == filter || filter == "all") {
+            items.children[i].classList.remove("d-none")
         }
     }
 }
+
+function searchInItems(target) {
+    if (target.trim() != "") {
+        for (let i = 0; i < items.children.length; i++) {
+            items.children[i].classList.add("d-none")
+            if (items.children[i].innerText.includes(target.trim())) {
+                items.children[i].classList.remove("d-none")
+            }
+        }
+    }
+}
+
+searchBtn.addEventListener("click", searchInItems(searchInput.value))
